@@ -4,7 +4,7 @@
   <br />
   <br />
 
-  # 🚀 Aarjav Jain — Premium Portfolio
+  # 🚀 Aarjav Jain —  Portfolio
   
   **AI & ML Engineer • Computer Vision Developer • Full-Stack Developer**
   
