@@ -1,0 +1,124 @@
+/* ── Services Section ────────────────────────────────────────── */
+.services {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 50px 50px 0 0;
+  padding: clamp(60px, 8vh, 100px) 0 var(--section-padding);
+  margin-top: -40px;
+  z-index: 2;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 10vw, 120px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 1;
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+  font-weight: 300;
+  color: rgba(26, 26, 26, 0.4);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+/* Service list */
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 32px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.3s var(--ease-premium);
+  cursor: default;
+}
+.serviceItem:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.serviceItem:hover {
+  padding-left: 12px;
+}
+
+.serviceNumber {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgba(26, 26, 26, 0.3);
+  min-width: 80px;
+  padding-top: 4px;
+}
+
+.serviceIcon {
+  font-size: 1.3rem;
+}
+
+.serviceContent {
+  flex: 1;
+}
+
+.serviceTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.serviceDesc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(26, 26, 26, 0.55);
+  line-height: 1.6;
+  max-width: 550px;
+}
+
+.serviceArrow {
+  font-size: 1.4rem;
+  color: rgba(26, 26, 26, 0.2);
+  padding-top: 6px;
+  transition: all 0.3s;
+}
+.serviceItem:hover .serviceArrow {
+  color: #1a1a1a;
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .services {
+    border-radius: 30px 30px 0 0;
+  }
+  .serviceItem {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .serviceArrow {
+    display: none;
+  }
+}

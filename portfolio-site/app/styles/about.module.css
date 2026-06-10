@@ -1,0 +1,369 @@
+/* ── About Section ───────────────────────────────────────────── */
+.about {
+  position: relative;
+  width: 100%;
+  padding: clamp(100px, 14vh, 180px) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 56px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Heading ──────────────────────────────────────────────── */
+.heading {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(3.2rem, 11vw, 120px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  line-height: 1;
+  margin-bottom: 48px;
+}
+
+/* ── Role badges ──────────────────────────────────────────── */
+.roleBadges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 56px;
+}
+
+.roleBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 11px 26px;
+  border-radius: 100px;
+  letter-spacing: 0.3px;
+  transition: all 0.3s var(--ease-premium);
+}
+.roleBadge:hover {
+  background: var(--glass-bg-hover);
+  border-color: rgba(255, 255, 255, 0.14);
+  transform: translateY(-2px);
+}
+
+.roleDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Bio text ─────────────────────────────────────────────── */
+.bioWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 64px;
+  width: 100%;
+}
+
+.bioWrapper p {
+  font-family: var(--font-body);
+  font-size: clamp(1.02rem, 1.35vw, 1.18rem);
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 960px;
+  width: 100%;
+  word-break: normal;
+  overflow-wrap: break-word;
+  min-height: 0.5em;
+}
+
+/* ── Skills ───────────────────────────────────────────────── */
+.skillsBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 72px;
+  width: 100%;
+}
+
+.skillRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.pill {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: rgba(79, 195, 247, 0.04);
+  border: 1px solid rgba(79, 195, 247, 0.1);
+  padding: 11px 26px;
+  border-radius: 100px;
+  letter-spacing: 0.3px;
+  transition: all 0.35s var(--ease-premium);
+  cursor: default;
+  white-space: nowrap;
+}
+.pill:hover {
+  background: rgba(79, 195, 247, 0.12);
+  border-color: rgba(79, 195, 247, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(79, 195, 247, 0.12);
+  color: #fff;
+}
+
+/* ── Achievement Cards ────────────────────────────────────── */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 72px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.statCard {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 40px 44px;
+  text-align: center;
+  min-width: 240px;
+  flex: 1;
+  max-width: 320px;
+  transition: all 0.4s var(--ease-premium);
+  position: relative;
+  overflow: hidden;
+}
+.statCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 1px;
+  background: var(--accent-gradient);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-premium);
+  pointer-events: none;
+}
+.statCard::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  right: 15%;
+  height: 3px;
+  background: var(--accent-gradient);
+  opacity: 0;
+  transition: all 0.4s var(--ease-premium);
+  border-radius: 3px;
+}
+.statCard:hover {
+  background: var(--bg-elevated);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.4);
+}
+.statCard:hover::before {
+  opacity: 0.3;
+}
+.statCard:hover::after {
+  opacity: 1;
+  left: 10%;
+  right: 10%;
+}
+
+.statValue {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-top: 8px;
+  letter-spacing: 0.3px;
+}
+
+.statSublabel {
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  margin-top: 6px;
+  letter-spacing: 0.3px;
+}
+
+/* ── Terminal ──────────────────────────────────────────────── */
+.terminal {
+  width: 100%;
+  max-width: 740px;
+  background: #070707;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow:
+    0 28px 72px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.terminalHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+
+.terminalTitle {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-left: 12px;
+  letter-spacing: 0.3px;
+}
+
+.terminalBody {
+  padding: 32px 40px;
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", "JetBrains Mono", monospace;
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+
+.prompt {
+  color: var(--accent-blue);
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.termName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.termRole {
+  color: var(--text-primary);
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.termFocus {
+  color: var(--accent-blue);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.termItem {
+  color: var(--text-secondary);
+}
+
+.arrow {
+  color: var(--accent-green);
+  margin-right: 10px;
+}
+
+.cursor {
+  animation: termBlink 1s step-end infinite;
+}
+
+.blinkLine {
+  opacity: 0.6;
+}
+
+@keyframes termBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .about {
+    padding: clamp(80px, 10vh, 120px) 0;
+  }
+  .heading {
+    margin-bottom: 32px;
+  }
+  .roleBadges {
+    margin-bottom: 40px;
+    gap: 10px;
+  }
+  .bioWrapper {
+    margin-bottom: 48px;
+  }
+  .skillsBlock {
+    margin-bottom: 52px;
+  }
+  .stats {
+    gap: 16px;
+    margin-bottom: 52px;
+  }
+  .statCard {
+    padding: 28px 24px;
+    min-width: 180px;
+  }
+  .statValue {
+    font-size: 1.8rem;
+  }
+  .roleBadge {
+    font-size: 0.76rem;
+    padding: 9px 20px;
+  }
+  .terminalBody {
+    padding: 24px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .statCard {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .terminalBody {
+    font-size: 0.8rem;
+    padding: 22px 24px;
+  }
+  .pill {
+    font-size: 0.78rem;
+    padding: 9px 20px;
+  }
+  .bioText {
+    font-size: 0.98rem;
+  }
+}

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarjav Jain - Full Stack Developer</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    
+    <meta name="description" content="Aarjav Jain - Full Stack Developer specializing in web development, AI, and blockchain applications">
+    <meta name="keywords" content="Full Stack Developer, Web Developer, JavaScript, React, Node.js, Python, AI, Blockchain">
+    <meta name="author" content="Aarjav Jain">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="fixed top-0 w-full z-50 bg-dark-bg/90 backdrop-blur-md border-b border-cyber-blue/20">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="font-orbitron text-2xl font-bold text-cyber-blue">
+                    &lt;AJ/&gt;
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <button data-section="home" class="nav-link hover:text-cyber-blue transition-colors duration-300">Home</button>
+                    <button data-section="about" class="nav-link hover:text-cyber-blue transition-colors duration-300">About</button>
+                    <button data-section="projects" class="nav-link hover:text-cyber-blue transition-colors duration-300">Projects</button>
+                    <button data-section="skills" class="nav-link hover:text-cyber-blue transition-colors duration-300">Skills</button>
+                    <button data-section="contact" class="nav-link hover:text-cyber-blue transition-colors duration-300">Contact</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i class="fas fa-bars text-cyber-blue"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden mt-4 pb-4 border-t border-cyber-blue/20 hidden">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <button data-section="home" class="nav-link text-left hover:text-cyber-blue transition-colors duration-300">Home</button>
+                    <button data-section="about" class="nav-link text-left hover:text-cyber-blue transition-colors duration-300">About</button>
+                    <button data-section="projects" class="nav-link text-left hover:text-cyber-blue transition-colors duration-300">Projects</button>
+                    <button data-section="skills" class="nav-link text-left hover:text-cyber-blue transition-colors duration-300">Skills</button>
+                    <button data-section="contact" class="nav-link text-left hover:text-cyber-blue transition-colors duration-300">Contact</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div id="particles-container" class="matrix-bg"></div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h1 class="font-orbitron text-5xl md:text-7xl font-bold mb-4 animate-float">
+                        <span class="text-white">AARJAV</span>
+                        <span class="text-cyber-blue"> JAIN</span>
+                    </h1>
+                    <div class="text-xl md:text-2xl text-gray-300 mb-6 font-inter">
+                        <span id="typewriter-text"></span>
+                    </div>
+                    <p class="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                        B.Tech CSE Student passionate about creating innovative solutions with cutting-edge technology. 
+                        Specializing in web development, AI, and blockchain applications.
+                    </p>
+                </div>
+
+                <!-- Resume Download Button -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button id="download-resume" class="glow-button bg-gradient-to-r from-cyber-blue to-cyber-purple px-8 py-4 rounded-full font-semibold text-white hover:scale-105 transition-all duration-300 animate-glow">
+                        <i class="fas fa-download mr-2"></i>
+                        Download Resume
+                    </button>
+                    <button data-section="about" class="nav-link border-2 border-cyber-blue text-cyber-blue px-8 py-4 rounded-full font-semibold hover:bg-cyber-blue hover:text-dark-bg transition-all duration-300">
+                        Explore More
+                    </button>
+                </div>
+
+                <!-- Tech Stack Icons -->
+                <div class="mt-12 flex justify-center space-x-6 text-2xl">
+                    <i class="fab fa-js-square text-yellow-400 hover:scale-125 transition-transform cursor-pointer" title="JavaScript"></i>
+                    <i class="fab fa-react text-cyan-400 hover:scale-125 transition-transform cursor-pointer" title="React"></i>
+                    <i class="fab fa-node-js text-green-400 hover:scale-125 transition-transform cursor-pointer" title="Node.js"></i>
+                    <i class="fab fa-python text-blue-400 hover:scale-125 transition-transform cursor-pointer" title="Python"></i>
+                    <i class="fas fa-database text-orange-400 hover:scale-125 transition-transform cursor-pointer" title="Database"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-dark-bg to-dark-card">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-orbitron text-4xl font-bold text-cyber-blue mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyber-blue to-cyber-purple mx-auto"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <div class="order-2 lg:order-1">
+                    <div class="relative">
+                        <div class="w-80 h-80 mx-auto rounded-full overflow-hidden border-4 border-cyber-blue animate-glow">
+                            <img 
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+                                alt="Aarjav Jain - Full Stack Developer" 
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-cyber-blue text-dark-bg px-4 py-2 rounded-full font-semibold">
+                            Available for Hire
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dot red"></div>
+                            <div class="terminal-dot yellow"></div>
+                            <div class="terminal-dot green"></div>
+                        </div>
+                        <div class="text-sm">
+                            <div class="mb-2">$ cat about_aarjav.txt</div>
+                            <div class="text-green-400 mb-4">
+                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                            </div>
+                            <div class="space-y-2 text-gray-300">
+                                <p>&gt; Hi, I'm Aarjav Jain 👨‍💻</p>
+                                <p>&gt; B.Tech CSE Student | CGPA: 9.4</p>
+                                <p>&gt; Full-Stack Development Intern at TBI GEU</p>
+                                <p>&gt; Open-Source Contributor at GSSoC'24</p>
+                                <p>&gt; Code For Bharat '25 Finalist 🏆</p>
+                                <p>&gt; Passionate about AI, Blockchain & Web Dev</p>
+                                <p class="text-cyber-blue">&gt;</p>
+                                <p class="text-cyber-blue">&gt; Skills: JavaScript | Python | React | Node.js</p>
+                                <p class="text-cyber-blue">&gt; MongoDB | Machine Learning | Blockchain</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+                        <div class="bg-dark-bg p-4 rounded-lg border border-cyber-blue/20">
+                            <div class="text-2xl font-bold text-cyber-blue">20+</div>
+                            <div class="text-sm text-gray-400">Projects</div>
+                        </div>
+                        <div class="bg-dark-bg p-4 rounded-lg border border-cyber-purple/20">
+                            <div class="text-2xl font-bold text-cyber-purple">500+</div>
+                            <div class="text-sm text-gray-400">Commits</div>
+                        </div>
+                        <div class="bg-dark-bg p-4 rounded-lg border border-cyber-pink/20">
+                            <div class="text-2xl font-bold text-cyber-pink">3+</div>
+                            <div class="text-sm text-gray-400">Years Coding</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-dark-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-orbitron text-4xl font-bold text-cyber-blue mb-4">Featured Projects</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyber-blue to-cyber-purple mx-auto"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                    Showcasing innovative solutions built with modern technologies
+                </p>
+            </div>
+
+            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+
+            <div class="text-center mt-12">
+                <button id="view-all-projects" class="glow-button bg-gradient-to-r from-cyber-blue to-cyber-purple px-6 py-3 rounded-full font-semibold text-white hover:scale-105 transition-all duration-300">
+                    <i class="fab fa-github mr-2"></i>
+                    View All Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gradient-to-b from-dark-bg to-dark-card">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-orbitron text-4xl font-bold text-cyber-blue mb-4">Technical Skills</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyber-blue to-cyber-purple mx-auto"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                    Proficient in modern technologies and frameworks
+                </p>
+            </div>
+
+            <div class="max-w-6xl mx-auto" id="skills-container">
+                <div id="skills-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Skills will be populated by JavaScript -->
+                </div>
+
+                <!-- Tech Stack Icons -->
+                <div class="mt-16 text-center">
+                    <h3 class="font-orbitron text-2xl font-bold text-white mb-8">Technologies I Work With</h3>
+                    <div class="flex flex-wrap justify-center gap-6 text-4xl">
+                        <i class="fab fa-js-square text-yellow-400 hover:scale-125 transition-transform cursor-pointer" title="JavaScript"></i>
+                        <i class="fab fa-react text-cyan-400 hover:scale-125 transition-transform cursor-pointer" title="React"></i>
+                        <i class="fab fa-node-js text-green-400 hover:scale-125 transition-transform cursor-pointer" title="Node.js"></i>
+                        <i class="fab fa-python text-blue-400 hover:scale-125 transition-transform cursor-pointer" title="Python"></i>
+                        <i class="fas fa-database text-orange-400 hover:scale-125 transition-transform cursor-pointer" title="MongoDB"></i>
+                        <i class="fab fa-git-alt text-red-400 hover:scale-125 transition-transform cursor-pointer" title="Git"></i>
+                        <i class="fab fa-docker text-blue-500 hover:scale-125 transition-transform cursor-pointer" title="Docker"></i>
+                        <i class="fab fa-aws text-orange-500 hover:scale-125 transition-transform cursor-pointer" title="AWS"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-orbitron text-4xl font-bold text-cyber-blue mb-4">Let's Connect</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyber-blue to-cyber-purple mx-auto"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                    Ready to collaborate? Let's build something amazing together!
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    
+                    <!-- Contact Form -->
+                    <div class="bg-dark-card p-8 rounded-xl border border-cyber-blue/20">
+                        <h3 class="font-orbitron text-2xl font-bold text-cyber-blue mb-6">Send Message</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                                <input 
+                                    type="text" 
+                                    id="name"
+                                    name="name"
+                                    class="w-full bg-dark-bg border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue transition-colors" 
+                                    placeholder="Your Name"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                                <input 
+                                    type="email" 
+                                    id="email"
+                                    name="email"
+                                    class="w-full bg-dark-bg border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue transition-colors" 
+                                    placeholder="your.email@example.com"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                                <textarea 
+                                    rows="4" 
+                                    id="message"
+                                    name="message"
+                                    class="w-full bg-dark-bg border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue transition-colors" 
+                                    placeholder="Tell me about your project..."
+                                    required
+                                ></textarea>
+                            </div>
+                            <button 
+                                type="submit" 
+                                class="glow-button w-full bg-gradient-to-r from-cyber-blue to-cyber-purple py-3 rounded-lg font-semibold text-white hover:scale-105 transition-all duration-300"
+                            >
+                                <i class="fas fa-paper-plane mr-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div class="bg-dark-card p-8 rounded-xl border border-cyber-purple/20">
+                            <h3 class="font-orbitron text-2xl font-bold text-cyber-purple mb-6">Get In Touch</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-cyber-blue/20 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-envelope text-cyber-blue"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-300">Email</p>
+                                        <p class="text-white font-semibold">aarjavjain2210@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-cyber-purple/20 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-phone text-cyber-purple"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-300">Phone</p>
+                                        <p class="text-white font-semibold">+91 7017589301</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-cyber-pink/20 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-map-marker-alt text-cyber-pink"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-300">Location</p>
+                                        <p class="text-white font-semibold">Dehradun, India</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="bg-dark-card p-8 rounded-xl border border-cyber-pink/20">
+                            <h3 class="font-orbitron text-2xl font-bold text-cyber-pink mb-6">Social Links</h3>
+                            <div class="flex space-x-4">
+                                <a 
+                                    href="https://github.com/aarjavjain" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    class="w-12 h-12 bg-gray-700 hover:bg-gray-600 rounded-full flex items-center justify-center transition-colors group"
+                                >
+                                    <i class="fab fa-github text-xl group-hover:text-cyber-blue"></i>
+                                </a>
+                                <a 
+                                    href="https://linkedin.com/in/aarjavjain" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    class="w-12 h-12 bg-blue-600 hover:bg-blue-500 rounded-full flex items-center justify-center transition-colors group"
+                                >
+                                    <i class="fab fa-linkedin text-xl group-hover:text-white"></i>
+                                </a>
+                                <a 
+                                    href="mailto:aarjavjain2210@gmail.com"
+                                    class="w-12 h-12 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center transition-colors group"
+                                >
+                                    <i class="fas fa-envelope text-xl group-hover:text-white"></i>
+                                </a>
+                                <a 
+                                    href="https://leetcode.com/aarjavjain" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    class="w-12 h-12 bg-orange-600 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors group"
+                                >
+                                    <i class="fas fa-code text-xl group-hover:text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/typewriter.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/main.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
