@@ -95,7 +95,7 @@ export default function Navbar() {
           </button>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
             <iframe 
-              src="/PORTFOLIO/resume.pdf" 
+              src="/resume.pdf" 
               title="Aarjav Jain Resume"
               width="100%" 
               height="100%"

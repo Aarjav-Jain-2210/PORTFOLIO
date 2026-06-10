@@ -96,7 +96,7 @@ export default function HeroSection() {
       <video
         ref={videoRef}
         className={styles.heroVideo}
-        src="/PORTFOLIO/hero-video.mp4"
+        src="/hero-video.mp4"
         autoPlay
         muted={isMuted}
         playsInline
@@ -150,7 +150,7 @@ export default function HeroSection() {
         </p>
 
         <div className={styles.ctas}>
-          <a href="/PORTFOLIO/resume.pdf" download className={styles.primaryBtn}>
+          <a href="/resume.pdf" download className={styles.primaryBtn}>
             <svg
               width="18"
               height="18"
