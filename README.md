@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="portfolio-site/public/projects/simplfy.png" alt="Aarjav Jain Portfolio" width="100%" style="border-radius: 12px;" />
+  <video src="portfolio-site/public/hero-video.mp4" width="100%" autoplay loop muted playsinline style="border-radius: 12px;"></video>
 
   <br />
   <br />
