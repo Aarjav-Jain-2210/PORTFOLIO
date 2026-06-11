@@ -48,16 +48,25 @@
   display: flex;
   align-items: flex-start;
   gap: 24px;
-  padding: 32px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 32px 24px;
+  margin-bottom: 24px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
   transition: all 0.3s var(--ease-premium);
   cursor: default;
 }
 .serviceItem:last-child {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 0;
 }
 .serviceItem:hover {
-  padding-left: 12px;
+  transform: translateY(-4px);
+  background: var(--glass-bg-hover);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
 }
 
 .serviceNumber {

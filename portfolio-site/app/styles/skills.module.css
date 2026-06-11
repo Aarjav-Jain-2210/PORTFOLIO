@@ -46,8 +46,11 @@
 }
 
 .card {
-  background: var(--bg-card);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
   border-radius: 20px;
   padding: 32px 24px;
   transition: all 0.4s var(--ease-premium);

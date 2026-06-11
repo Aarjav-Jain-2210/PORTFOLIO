@@ -46,18 +46,21 @@
   align-items: center;
   gap: 16px;
   padding: 24px 28px;
-  background: var(--bg-card);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
   border-radius: 16px;
   text-decoration: none;
   transition: all 0.4s var(--ease-premium);
   color: var(--text-primary);
 }
 .contactCard:hover {
-  background: var(--bg-elevated);
-  border-color: rgba(79, 195, 247, 0.15);
+  background: var(--glass-bg-hover);
+  border-color: rgba(79, 195, 247, 0.3);
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
 .cardIcon {

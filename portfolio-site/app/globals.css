@@ -41,9 +41,11 @@
   --hero-gradient: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
 
   /* Glass */
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(20, 20, 25, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.15);
   --glass-bg-hover: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.5);
+  --glass-blur: blur(24px);
 
   /* Spacing */
   --section-padding: clamp(60px, 10vh, 120px);
