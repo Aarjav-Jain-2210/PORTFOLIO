@@ -14,7 +14,7 @@ export default function HeroSection() {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [showContent, setShowContent] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
 
