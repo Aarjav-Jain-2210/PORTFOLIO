@@ -16,7 +16,7 @@
     A cinematic, highly interactive, and visually striking portfolio demonstrating expertise in Artificial Intelligence, Machine Learning, and Modern Full-Stack Development.
   </p>
 
-  ### [🔗 View Live Portfolio Here](https://aarjav-jain-2210.github.io/PORTFOLIO/)
+  ### [🔗 View Live Portfolio Here](https://aarjav-jain.vercel.app)
 </div>
 
 <br />
@@ -37,7 +37,7 @@
 | **Styling** | Vanilla CSS Modules (Glassmorphism, Fluid Layouts) |
 | **Animations** | GSAP, Three.js, Custom Intersection Observers |
 | **AI/ML Focus** | PyTorch, TensorFlow, OpenCV, YOLOv8, Scikit-Learn |
-| **Deployment** | GitHub Pages (Static Export) |
+| **Deployment** | Vercel (CI/CD Integrated) |
 
 ## 🚀 Quick Start (Local Development)
 
