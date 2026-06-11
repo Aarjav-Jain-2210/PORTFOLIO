@@ -14,7 +14,7 @@ export default function HeroSection() {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [showContent, setShowContent] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
 
@@ -97,7 +97,6 @@ export default function HeroSection() {
         ref={videoRef}
         className={styles.heroVideo}
         src="/hero-video.mp4"
-        muted={isMuted}
         playsInline
       />
 
@@ -105,35 +104,31 @@ export default function HeroSection() {
       <div className={styles.gradientOverlay} />
       <div className={styles.bottomGradient} />
 
-      {/* Sound toggle */}
+      {/* Play/Pause toggle */}
       <button
         className={styles.soundToggle}
         onClick={() => {
           if (videoRef.current) {
-            if (videoRef.current.paused) {
-              videoRef.current.play();
-              videoRef.current.muted = false;
-              setIsMuted(false);
+            if (isPlaying) {
+              videoRef.current.pause();
+              setIsPlaying(false);
             } else {
-              const newMuted = !isMuted;
-              setIsMuted(newMuted);
-              videoRef.current.muted = newMuted;
+              videoRef.current.muted = false;
+              videoRef.current.play();
+              setIsPlaying(true);
             }
           }
         }}
-        aria-label={isMuted ? "Unmute" : "Mute"}
+        aria-label={isPlaying ? "Pause Video" : "Play Video"}
       >
-        {isMuted ? (
+        {!isPlaying ? (
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-            <line x1="23" y1="9" x2="17" y2="15" />
-            <line x1="17" y1="9" x2="23" y2="15" />
+            <polygon points="5 3 19 12 5 21 5 3" />
           </svg>
         ) : (
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-            <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-            <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+            <rect x="6" y="4" width="4" height="16" />
+            <rect x="14" y="4" width="4" height="16" />
           </svg>
         )}
       </button>
