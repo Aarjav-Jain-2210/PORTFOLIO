@@ -14,7 +14,7 @@ export default function HeroSection() {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [showContent, setShowContent] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
 
@@ -97,7 +97,6 @@ export default function HeroSection() {
         ref={videoRef}
         className={styles.heroVideo}
         src="/hero-video.mp4"
-        autoPlay
         muted={isMuted}
         playsInline
       />
@@ -110,8 +109,17 @@ export default function HeroSection() {
       <button
         className={styles.soundToggle}
         onClick={() => {
-          setIsMuted(!isMuted);
-          if (videoRef.current) videoRef.current.muted = !isMuted;
+          if (videoRef.current) {
+            if (videoRef.current.paused) {
+              videoRef.current.play();
+              videoRef.current.muted = false;
+              setIsMuted(false);
+            } else {
+              const newMuted = !isMuted;
+              setIsMuted(newMuted);
+              videoRef.current.muted = newMuted;
+            }
+          }
         }}
         aria-label={isMuted ? "Unmute" : "Mute"}
       >
